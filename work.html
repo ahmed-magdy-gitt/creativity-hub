@@ -1,20 +1,20 @@
 <!doctype html>
-<html lang="en" dir="ltr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex">
-<title>Our Work | Creativity Hub</title>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='10' fill='%23050d16'/%3E%3Cpath d='M24 6 40 15v18L24 42 8 33V15z' fill='none' stroke='%2322d3ee' stroke-width='3'/%3E%3C/svg%3E">
+<html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex">
+<title>أعمالنا | Creative Hub</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='10' fill='%23070e17'/%3E%3Cpath d='M24 6 40 15v18L24 42 8 33V15z' fill='none' stroke='%2322d3ee' stroke-width='3'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="assets/style.css"></head>
 <body data-page="work.html">
 <main class="wrap">
-<section class="hero"><h1>Our <span>Work</span></h1><p>A selection of recent projects from our studio.</p></section>
+<section class="hero"><h1>أعمالنا <span>المميزة</span></h1><p>مجموعة من أحدث المشاريع من استوديو Creative Hub.</p></section>
 <div class="tabs" id="tabs"></div>
 <section class="grid3" id="list"></section>
-<div class="center"><a class="btn" href="contact.html">Start your project with us <span class="circ"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></div>
+<div class="center"><a class="btn" href="contact.html"><span class="circ"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>ابدأ مشروعك معنا الآن</a></div>
 </main>
 <script src="assets/app.js"></script>
 <script>
-var tabs=['All','Branding','Apps','Web','UI/UX'],cur='All';
+var tabs=['الكل','هوية','تطبيقات','مواقع','UI/UX'],cur='الكل';
 function draw(){document.getElementById('tabs').innerHTML=tabs.map(function(t){return '<button class="'+(t===cur?'on':'')+'" data-tab="'+t+'">'+t+'</button>'}).join('');
-document.getElementById('list').innerHTML=Object.keys(CH.P).filter(function(k){return cur==='All'||CH.P[k].tag===cur}).map(function(k){var p=CH.P[k];return '<article class="card">'+thumb(k)+'<h3>'+p.t+'</h3><p>'+p.d+'</p><button class="circ" data-proj="'+k+'" aria-label="View '+p.t+'">'+CH.ICON.arrow+'</button></article>'}).join('');}
+document.getElementById('list').innerHTML=Object.keys(CH.P).filter(function(k){return cur==='الكل'||CH.P[k].tag===cur}).map(function(k){var p=CH.P[k];return '<article class="card">'+thumb(k)+'<h3>'+p.t+'</h3><p>'+p.d+'</p><button class="circ" data-proj="'+k+'" aria-label="عرض '+p.t+'">'+CH.ICON.arrow+'</button></article>'}).join('');}
 document.getElementById('tabs').addEventListener('click',function(e){var b=e.target.closest('[data-tab]');if(b){cur=b.dataset.tab;draw();}});
 draw();
 </script>

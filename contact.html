@@ -1,28 +1,28 @@
 <!doctype html>
-<html lang="en" dir="ltr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex">
-<title>Contact | Creativity Hub</title>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='10' fill='%23050d16'/%3E%3Cpath d='M24 6 40 15v18L24 42 8 33V15z' fill='none' stroke='%2322d3ee' stroke-width='3'/%3E%3C/svg%3E">
+<html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex">
+<title>تواصل معنا | Creative Hub</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='10' fill='%23070e17'/%3E%3Cpath d='M24 6 40 15v18L24 42 8 33V15z' fill='none' stroke='%2322d3ee' stroke-width='3'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="assets/style.css"></head>
 <body data-page="contact.html">
 <main class="wrap">
-<section class="hero"><h1>Let's build <span>something great</span></h1><p>Tell us about your project and we will get back within one business day.</p></section>
+<section class="hero"><h1>لنبنِ معًا <span>شيئًا رائعًا</span></h1><p>أخبرنا عن مشروعك وسنعود إليك خلال يوم عمل واحد.</p></section>
 <div class="cform">
 <form id="cf" novalidate>
-<div class="fld"><input name="name" placeholder="Your name"></div><span class="err" data-err="name"></span>
-<div class="fld"><input name="email" type="email" placeholder="Email address"></div><span class="err" data-err="email"></span>
-<div class="fld"><textarea name="msg" rows="5" placeholder="Project details"></textarea></div><span class="err" data-err="msg"></span>
-<button class="btn pri" type="submit">Send message</button>
-<div class="ok" id="ok" hidden>Thank you! Your message has been sent.</div>
+<div class="fld"><input name="name" placeholder="الاسم"></div><span class="err" data-err="name"></span>
+<div class="fld"><input name="email" type="email" placeholder="البريد الإلكتروني"></div><span class="err" data-err="email"></span>
+<div class="fld"><textarea name="msg" rows="5" placeholder="تفاصيل المشروع"></textarea></div><span class="err" data-err="msg"></span>
+<button class="btn pri" type="submit">إرسال الرسالة</button>
+<div class="ok" id="ok" hidden>شكرًا لك! تم إرسال رسالتك.</div>
 </form>
-<div class="cinfo"><h2 class="sec" style="margin-top:0">Studio</h2><p>Email: hello@example.com</p><p>Phone: +00 000 000 000</p><p>Office: 12 Example Street, Sample City</p><p>Hours: Sun to Thu, 9:00 to 17:00</p></div>
+<div class="cinfo"><h2 class="sec" style="margin-top:0">الاستوديو</h2><p>البريد: hello@example.com</p><p>الهاتف: +00 000 000 000</p><p>العنوان: 12 شارع المثال، مدينة نموذجية</p><p>ساعات العمل: الأحد إلى الخميس، 9:00 إلى 17:00</p></div>
 </div>
 </main>
 <script src="assets/app.js"></script>
 <script>
 document.getElementById('cf').addEventListener('submit',function(e){e.preventDefault();var f=e.target;
-var a=field(f,'name',function(v){return v.length>1},'Please enter your name');
-var b=field(f,'email',function(v){return /^\S+@\S+\.\S+$/.test(v)},'Enter a valid email');
-var c=field(f,'msg',function(v){return v.length>9},'Please write at least 10 characters');
-if(a&&b&&c){f.reset();document.getElementById('ok').hidden=false;toast('Message sent');}});
+var a=field(f,'name',function(v){return v.length>1},'الرجاء إدخال الاسم');
+var b=field(f,'email',function(v){return /^\S+@\S+\.\S+$/.test(v)},'أدخل بريدًا إلكترونيًا صحيحًا');
+var c=field(f,'msg',function(v){return v.length>9},'الرجاء كتابة 10 أحرف على الأقل');
+if(a&&b&&c){f.reset();document.getElementById('ok').hidden=false;toast('تم إرسال الرسالة');}});
 </script>
 </body></html>

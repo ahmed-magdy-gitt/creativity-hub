@@ -1,21 +1,22 @@
 <!doctype html>
-<html lang="en" dir="ltr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex">
-<title>Services | Creativity Hub</title>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='10' fill='%23050d16'/%3E%3Cpath d='M24 6 40 15v18L24 42 8 33V15z' fill='none' stroke='%2322d3ee' stroke-width='3'/%3E%3C/svg%3E">
+<html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex">
+<title>خدماتنا | Creative Hub</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='10' fill='%23070e17'/%3E%3Cpath d='M24 6 40 15v18L24 42 8 33V15z' fill='none' stroke='%2322d3ee' stroke-width='3'/%3E%3C/svg%3E">
 <link rel="stylesheet" href="assets/style.css"></head>
 <body data-page="services.html">
 <main class="wrap">
-<section class="hero"><h1>Our <span>Services</span></h1><p>Everything you need to launch and grow a modern brand.</p></section>
+<section class="hero"><h1>خدماتنا <span>الإبداعية</span></h1><p>كل ما تحتاجه لإطلاق علامتك التجارية وتنميتها.</p></section>
 <div id="accs"></div>
-<div class="center" style="margin-top:30px"><a class="btn" href="contact.html">Request a quote <span class="circ"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></div>
+<div style="margin-top:30px"></div>
+<div class="center"><a class="btn" href="contact.html"><span class="circ"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>اطلب عرض سعر</a></div>
 </main>
 <script src="assets/app.js"></script>
 <script>
-var S=[['branding','Branding and Identity','Logo design, colour systems, typography and full brand guidelines so your business looks consistent everywhere.'],['apps','App Development','Mobile and web apps designed around users, from prototype to launch, with ongoing support.'],['web','E-commerce Websites','Fast, responsive online stores with catalogue, cart and checkout flows tailored to your products.'],['uiux','UI/UX Design','Research-driven interfaces, wireframes and interactive prototypes that improve conversion and usability.']];
+var S=[['branding','هوية تجارية','تصميم الشعارات والألوان والخطوط ودليل الهوية الكامل ليظهر نشاطك بشكل متسق في كل مكان.'],['apps','تطوير تطبيقات','تطبيقات جوال وويب مصممة حول المستخدم، من النموذج الأولي حتى الإطلاق مع دعم مستمر.'],['web','إنشاء متاجر','متاجر إلكترونية سريعة ومتجاوبة مع كتالوج وسلة وإتمام شراء مناسب لمنتجاتك.'],['uiux','UI/UX','واجهات قائمة على البحث وهياكل أولية ونماذج تفاعلية ترفع التحويل وسهولة الاستخدام.']];
 var box=document.getElementById('accs');
-box.innerHTML=S.map(function(s,i){return '<div class="acc'+(location.hash==='#'+s[0]||(!location.hash&&i===0)?' on':'')+'" id="'+s[0]+'"><button>'+s[1]+'<span style="transition:.2s">+</span></button><div>'+s[2]+'<br><br><button class="lnk" data-ask="'+s[1]+'">Ask about this service</button></div></div>'}).join('');
-box.addEventListener('click',function(e){var a=e.target.closest('[data-ask]');if(a){openModal('<h3>'+a.dataset.ask+'</h3><p>Leave your email and we will send you details and pricing.</p><form id="qf" novalidate><div class="fld"><input name="em" placeholder="Email address" type="email"></div><span class="err" data-err="em"></span><button class="btn pri" type="submit">Send</button></form>');return;}
+box.innerHTML=S.map(function(s,i){return '<div class="acc'+(location.hash==='#'+s[0]||(!location.hash&&i===0)?' on':'')+'" id="'+s[0]+'"><button>'+s[1]+'<span style="transition:.2s">+</span></button><div>'+s[2]+'<br><br><button class="lnk" data-ask="'+s[1]+'">اسأل عن هذه الخدمة</button></div></div>'}).join('');
+box.addEventListener('click',function(e){var a=e.target.closest('[data-ask]');if(a){openModal('<h3>'+a.dataset.ask+'</h3><p>اترك بريدك الإلكتروني وسنرسل لك التفاصيل والأسعار.</p><form id="qf" novalidate><div class="fld"><input name="em" placeholder="البريد الإلكتروني" type="email"></div><span class="err" data-err="em"></span><button class="btn pri" type="submit">إرسال</button></form>');return;}
 var b=e.target.closest('.acc>button');if(b)b.parentNode.classList.toggle('on');});
-document.addEventListener('submit',function(e){if(e.target.id!=='qf')return;e.preventDefault();if(field(e.target,'em',function(v){return /^\S+@\S+\.\S+$/.test(v)},'Enter a valid email'))closeModal(),toast('Thanks! We will email you shortly.');});
+document.addEventListener('submit',function(e){if(e.target.id!=='qf')return;e.preventDefault();if(field(e.target,'em',function(v){return /^\S+@\S+\.\S+$/.test(v)},'أدخل بريدًا إلكترونيًا صحيحًا'))closeModal(),toast('شكرًا! سنراسلك قريبًا.');});
 </script>
 </body></html>
