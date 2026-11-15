@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en" dir="ltr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex">
+<title>About Us | Creativity Hub</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='10' fill='%23050d16'/%3E%3Cpath d='M24 6 40 15v18L24 42 8 33V15z' fill='none' stroke='%2322d3ee' stroke-width='3'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/style.css"></head>
+<body data-page="about.html">
+<main class="wrap">
+<h2 class="sec">Our Story</h2>
+<div class="two"><div><p>Our story began with a clear vision: to redefine digital excellence. We were founded on innovation, and our goal is to be a true partner to our clients on their journey toward creativity and artistic distinction.</p></div>
+<div><p>Creativity Hub is a pioneer in digital innovation, with award-winning work in projects spanning UI design, visual identity and brand strategy, turning complex ideas into clear, memorable experiences.</p></div></div>
+<div class="panels">
+<div class="panel"><h3>Our Team</h3><div class="team" id="t1"></div></div>
+<div class="panel"><h3>Our Team</h3><div class="team" id="t2"></div></div>
+<div class="panel"><h3>Our Core Values</h3><div id="vals"></div></div>
+</div>
+</main>
+<script src="assets/app.js"></script>
+<script>
+var T=[['Ahmed Kamal','Creative Director','Digital Design','#3b6e8f'],['Sara Nimr','Creative Director','Visual Design','#8a5a44'],['Adeer Omari','Interaction Lead','UX Coordination','#4a6b5a'],['Mona Orwa','Creative Director','Brand Design','#7a4a6a'],['Saad Masik','Creative Director','Motion Design','#555f9a'],['Sam Karim','Creative Director','Digital Design','#2f7f86'],['Seen Alari','Creative Director','Art Direction','#9a5a5a'],['Masih Orwa','Creative Director','Visual Design','#5a7a3a']];
+function mem(m,i){return '<button class="mem" data-m="'+i+'"><div class="av" style="background:'+m[3]+'">'+m[0].split(' ').map(function(w){return w[0]}).join('')+'</div><div><b>'+m[0]+'</b><span>'+m[1]+'</span><em>'+m[2]+'</em></div></button>'}
+document.getElementById('t1').innerHTML=T.slice(0,4).map(function(m,i){return mem(m,i)}).join('');
+document.getElementById('t2').innerHTML=T.slice(4).map(function(m,i){return mem(m,i+4)}).join('');
+var V=[['Our Core Values','Our core values are to deliver digital excellence in everything we do.'],['Continuous Innovation','Continuous innovation driven by curiosity and a restless drive to improve.'],['Real Partnership','We partner with clients as one team, sharing goals and results.'],['Commitment to Quality','We commit to quality and deliver outstanding solutions every time.']];
+var ic=['&#10022;','&#9728;','&#9881;','&#10004;'];
+document.getElementById('vals').innerHTML=V.map(function(v,i){return '<div class="val"><div class="ic">'+ic[i]+'</div><div><b>'+(i?v[0]:'Digital Excellence')+'</b><p>'+v[1]+'</p></div></div>'}).join('');
+document.addEventListener('click',function(e){var b=e.target.closest('[data-m]');if(!b)return;var m=T[b.dataset.m];openModal('<h3>'+m[0]+'</h3><p style="color:var(--cy)">'+m[1]+' - '+m[2]+'</p><p>With over a decade of experience, '+m[0].split(' ')[0]+' leads projects across branding, apps and web at Creativity Hub.</p><a class="btn pri" href="contact.html" style="text-decoration:none">Contact the team</a>');});
+</script>
+</body></html>

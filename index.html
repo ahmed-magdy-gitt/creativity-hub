@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en" dir="ltr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex">
+<title>Creativity Hub | Creative Design Studio</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Crect width='48' height='48' rx='10' fill='%23050d16'/%3E%3Cpath d='M24 6 40 15v18L24 42 8 33V15z' fill='none' stroke='%2322d3ee' stroke-width='3'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/style.css"></head>
+<body data-page="index.html">
+<main class="wrap">
+<section class="hero"><h1>Towards a digital future <span>that dazzles</span></h1><p>Our designs build, our creativity delivers. Explore our innovative digital solutions.</p></section>
+<section class="grid3" id="feat"></section>
+<div class="center"><a class="btn" href="contact.html">Start your project with us <span class="circ"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a></div>
+</main>
+<script src="assets/app.js"></script>
+<script>
+var items=[['shop','E-commerce Website','Building the "TechGear" online store for selling the latest gadgets.'],['app','Educational App','Developing the LearnSphere app for interactive learning.'],['brand','Brand Identity Project','Visual identity design for Innovate Solutions.']];
+document.getElementById('feat').innerHTML=items.map(function(i){return '<article class="card">'+thumb(i[0])+'<h3>'+i[1]+'</h3><p>'+i[2]+'</p><button class="circ" data-proj="'+i[0]+'" aria-label="View '+i[1]+'">'+CH.ICON.arrow+'</button></article>'}).join('');
+</script>
+</body></html>
